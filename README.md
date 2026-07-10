@@ -8,3 +8,24 @@ This README.md explicitly captures the Python and Pygame-based structure of your
 
 #Project Overview: 
 Focuses on a native Python implementation using Pygame to match the iconic look, fluid 2D grid matrix mechanics, and progressive difficulty of the Google Play version.
+
+Folder Structure: Maps out your layout cleanly:
+Snake Game GUI/
+├── main.py
+└── src/
+    ├── config.py
+    ├── states.py
+    └── ui.py
+
+Core Logic: Explains the frame-rate-locked game loop, coordinate tuple manipulation for the snake array (insert at head / pop at tail), non-overlapping food generation logic, and input sanitization (preventing immediate 180-degree self-collisions).
+
+Modular Breakdown:
+
+main.py: The entry point managing instantiation, event routing, and the execution loop.
+
+config.py: Centralized storage for grid math, RGB colors, screen sizing, and difficulty speed scaling.
+
+states.py: A clean Finite State Machine handling MENU, PLAYING, PAUSED, and GAME_OVER.
+
+ui.py: Handles rendering text layers, drawing grid-aligned rectangles, and formatting score counters.
+    
