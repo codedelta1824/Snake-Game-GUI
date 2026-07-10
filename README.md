@@ -1,31 +1,38 @@
 # Snake-Game-GUI
-This project is a desktop recreation of the classic Google Play Games Snake, built entirely in Python (utilizing the Pygame library for rendering and input handling).  The game operates on a 2D grid matrix where a continuous while loop serves as the game's heartbeat, processing events, updating mechanics, and redrawing
 
-🗂️ A professional, comprehensive README.md file tailored specifically to your project's architecture has been generated.
+A polished desktop Snake game built in Python with Pygame. The project features a modern UI, WASD/arrow-key controls, a pause button, score tracking, and a game-over flow with restart support.
 
-#📜 Brief Summary of the Generated Documentation
-This README.md explicitly captures the Python and Pygame-based structure of your Google Play Games Snake Clone, adhering strictly to your file map:
+## Features
+- Professional game window with a clean HUD
+- Smooth snake movement on a grid-based board
+- Controls using WASD or arrow keys
+- Pause and resume with P, Escape, or the on-screen button
+- Score and high-score tracking
+- Menu, gameplay, pause, and game-over states
 
-#Project Overview: 
-Focuses on a native Python implementation using Pygame to match the iconic look, fluid 2D grid matrix mechanics, and progressive difficulty of the Google Play version.
+## Project Structure
+- main.py: Game loop, input handling, and state transitions
+- src/config.py: Colors, sizing, and board constants
+- src/states.py: Game states for menu, playing, paused, and game over
+- src/ui.py: Rendering helpers, buttons, overlays, and HUD
 
-Folder Structure: Maps out your layout cleanly:
-Snake Game GUI/
-├── main.py
-└── src/
-    ├── config.py
-    ├── states.py
-    └── ui.py
+## Installation
+1. Install Python 3.10+.
+2. Install Pygame:
+   ```bash
+   pip install pygame
+   ```
 
-Core Logic: Explains the frame-rate-locked game loop, coordinate tuple manipulation for the snake array (insert at head / pop at tail), non-overlapping food generation logic, and input sanitization (preventing immediate 180-degree self-collisions).
+## Run the Game
+```bash
+python main.py
+```
 
-Modular Breakdown:
+## Controls
+- WASD or Arrow Keys: Move the snake
+- P or Escape: Pause/Resume
+- Mouse: Click the on-screen buttons
 
-main.py: The entry point managing instantiation, event routing, and the execution loop.
-
-config.py: Centralized storage for grid math, RGB colors, screen sizing, and difficulty speed scaling.
-
-states.py: A clean Finite State Machine handling MENU, PLAYING, PAUSED, and GAME_OVER.
-
-ui.py: Handles rendering text layers, drawing grid-aligned rectangles, and formatting score counters.
+## Notes
+The game uses the standard library and Pygame for rendering and input handling.
     
