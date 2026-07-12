@@ -17,8 +17,6 @@ from src.config import (
     WIDTH,
 )
 from src.states import GameState
-
-
 class Button:
     def __init__(self, x: int, y: int, width: int, height: int, label: str) -> None:
         self.rect = pygame.Rect(x, y, width, height)
