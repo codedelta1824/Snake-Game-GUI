@@ -161,12 +161,10 @@ class SnakeGame:
             if self.next_direction != (-self.direction[0], -self.direction[1]):
                 self.direction = self.next_direction
             self.next_direction = None
-
         head_x, head_y = self.snake[0]
         next_x = head_x + self.direction[0]
         next_y = head_y + self.direction[1]
         next_head = (next_x, next_y)
-
         if not (0 <= next_head[0] < GRID_SIZE and 0 <= next_head[1] < GRID_SIZE):
             self.end_game()
             return
@@ -174,9 +172,7 @@ class SnakeGame:
         if next_head in self.snake[1:]:
             self.end_game()
             return
-
         self.snake.insert(0, next_head)
-
         if next_head == self.food:
             self.score += 1
             self.speed = min(16, 8 + self.score // 3)
