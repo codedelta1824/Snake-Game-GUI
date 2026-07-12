@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class GameState(str, Enum):
     MENU = "menu"
     PLAYING = "playing"
